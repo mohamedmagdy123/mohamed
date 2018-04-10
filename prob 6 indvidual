@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float HR=16.78; //hour rate
+    int   HW=40; //hours per week
+    int   dependants;
+    int   OH; // number of over hours
+    float OT=OH*1.5*HR;
+    float payment;
+    float total_taxes=0.25;
+    float gross;
+    int   UD=10; //UnionDuties
+cout << "welcome to the company paid system!" << endl;
+cout << "how many hours you work Overtime per week?:" << endl;
+cin  >> OH;
+payment =HR*HW+(OH*1.5*HR)-UD;
+cout << "how many dependants u have?:" << endl;
+cin  >> dependants;
+if (dependants >= 3){
+    payment -= 35;
+}
+gross=(payment*total_taxes);
+
+cout << "Your total grosspay after taxes is:" << gross << endl;
+return 0;
+}
